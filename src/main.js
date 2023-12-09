@@ -106,6 +106,8 @@ var nevermindButton = document.querySelector('.show-main')
 var savedButton = document.querySelector('.show-saved')
 var backToMainButton = document.querySelector('.back-to-main')
 var showPosterButton = document.querySelector('.make-poster')
+var saveButton = document.querySelector('.save-poster')
+var showSavedButton = document.querySelector('.show-saved')
 // event listeners go here 👇
 randomButton.addEventListener('click', randomPoster)
 createPosterButton.addEventListener('click', toggleForm)
@@ -114,6 +116,8 @@ savedButton.addEventListener('click', viewSavePosters)
 backToMainButton.addEventListener('click', backToMainPage)
 showPosterButton.addEventListener('click', () => {
   makePoster(event)})
+saveButton.addEventListener('click', savePoster)
+
 // functions and event handlers go here 👇
 // (we've provided two to get you started)!
 function getRandomIndex(array) {
@@ -134,6 +138,7 @@ function randomPoster() {
   var randomQuote = getRandomIndex(quotes)
 
   var newPoster = createPoster(images[randomImage], titles[randomTitle], quotes[randomQuote])
+    currentPoster = newPoster
 
   var posterTitle = document.querySelector('.poster-title')
     posterTitle.innerText = newPoster.title;
@@ -141,6 +146,7 @@ function randomPoster() {
     posterQuote.innerText = newPoster.quote;
   var posterImage = document.querySelector('.poster-img')
     posterImage.setAttribute('src', newPoster.imageURL)
+  return currentPoster
 }
 
 randomPoster();
@@ -187,15 +193,23 @@ function makePoster(){
     titles.push(titleInput.value)
     quotes.push(quoteInput.value)
     
+  var customPoster = createPoster(imageInput.value, titleInput.value, quoteInput.value)   
     backToMainPage();
+  currentPoster = customPoster
+    return currentPoster
 }
 
+//SAVE PAGE/BUTTON~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-// When the Show My Poster button is clicked, several things will happen:
-// Use the values from the inputs to create a new, unique poster object (part of your data model)
-      //create variables for image, title and quote input fields
-      //create function that makes an object - we've done this, just make variable with input.values from the boxes
-      //add event listener of this function to the button 
-// Save the submitted data into the respective arrays (image URL into the images array, etc - all part of your data model) so that future random posters can use the user-created data
-// Change back to the main poster view (hiding the form view again)
-// Use the new, unique poster object (part of your data model) to display the newly created poster image, title, and quote in the main view on the DOM
+function savePoster() { 
+  if(!savedPosters.includes(currentPoster)) {
+    savedPosters.push(currentPoster)
+     var posterGrid = document.querySelector('.saved-posters-grid')
+        posterGrid.insertAdjacentHTML('afterbegin', 
+        `<div class="mini-poster">
+          <img src="${currentPoster.imageURL}" alt="motivational poster">
+          <h2>${currentPoster.title}</h2>
+          <h4>${currentPoster.quote}</h4>
+         </div>`)
+      }
+}
