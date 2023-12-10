@@ -219,7 +219,14 @@ function savePoster() {
 
 //DOUBLE CLICK TO DELETE~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-posterGrid.addEventListener('dblclick', function(event) {
-  var clickedElement = event.target.closest('div')
-  clickedElement.remove();
-  })
+
+  posterGrid.addEventListener('dblclick', function(event) {
+    var clickedElement = event.target.closest('div')
+    var miniPosterID = clickedElement.id
+    clickedElement.remove();
+    for (var i= 0; i < savedPosters.length; i++) {
+      if (savedPosters[i].id == miniPosterID) {
+        savedPosters.splice(i, 1)
+        }
+      }
+    })
