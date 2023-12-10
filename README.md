@@ -12,7 +12,9 @@ We built a website that allows you to either generate a random motivational post
 They have to go to our repository on github get the SSH key, do git clone SSH key on their local terminal and then open the test editor by cding into the cloned directory and running code . then to open the website you run the command open index.html
 ### Preview of App:
 [//]: <> (Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off.)
-![screen shot of create poster page](Screensho.png)
+![screen shot of create poster page](./readme-imgs/Screensho.png)
+
+
 ### Context:
 [//]: <> (Give some context for the project here. How long did you have to work on it? How far into the Turing program are you?)
 We began actually coding on Wednesday, we spent about 3.5 hours completing iteration 1. Thursday we spent about 4 hours working on iteration two. Friday we spent about 7.5 hours finishing iteration 2 and working on iteration 3. Saturday we spent about 7 hours finishing iteration 3 and starting iteration 4 and Sunday we spent about two hours finishing iteration 4. 
