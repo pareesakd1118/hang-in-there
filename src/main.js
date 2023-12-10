@@ -108,6 +108,7 @@ var backToMainButton = document.querySelector('.back-to-main')
 var showPosterButton = document.querySelector('.make-poster')
 var saveButton = document.querySelector('.save-poster')
 var showSavedButton = document.querySelector('.show-saved')
+var posterGrid = document.querySelector('.saved-posters-grid')
 // event listeners go here 👇
 randomButton.addEventListener('click', randomPoster)
 createPosterButton.addEventListener('click', toggleForm)
@@ -117,6 +118,7 @@ backToMainButton.addEventListener('click', backToMainPage)
 showPosterButton.addEventListener('click', () => {
   makePoster(event)})
 saveButton.addEventListener('click', savePoster)
+
 
 // functions and event handlers go here 👇
 // (we've provided two to get you started)!
@@ -213,3 +215,11 @@ function savePoster() {
          </div>`)
       }
 }
+
+
+//DOUBLE CLICK TO DELETE~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+posterGrid.addEventListener('dblclick', function(event) {
+  var clickedElement = event.target.closest('div')
+  clickedElement.remove();
+  })
