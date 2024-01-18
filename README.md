@@ -16,8 +16,8 @@ We built a web application that allows you to either generate a random motivatio
 We have been coding Javascript for about 2 weeks, and HTML/CSS for about one week. We spent an average of 7 hours a day of worktime for 4 days, for a total worktime of about 30 hours. 
 
 ### Contributors:
-[Pareesa Kamgar-Dayhoff's GitHub](https://github.com/pareesakd1118)
-[Megan Crotteau's GitHub](https://github.com/crotteau)
+- [Pareesa Kamgar-Dayhoff's GitHub](https://github.com/pareesakd1118)
+- [Megan Crotteau's GitHub](https://github.com/crotteau)
 
 ### Learning Goals:
 - Write clean, DRY JavaScript
