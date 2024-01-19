@@ -1,7 +1,7 @@
 # Hang in There  
 
 ### Abstract:
-We built a web application that allows you to either generate a random motivational poster or create one yourself by choosing an image and a quote and a title, save the poster (whether it is randomly generated or custom made) to a designated page without saving duplicates, and double click on a saved poster to delete it from the saved-posters page. 
+We built a web application (deployed website linked [here](https://pareesakd1118.github.io/hang-in-there/)) that allows you to either generate a random motivational poster or create one yourself by choosing an image and a quote and a title, save the poster (whether it is randomly generated or custom made) to a designated page without saving duplicates, and double click on a saved poster to delete it from the saved-posters page. 
 
 ### Installation Instructions:
 1. Fork this repo and copy the SSH Key
